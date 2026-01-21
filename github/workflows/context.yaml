@@ -2,6 +2,7 @@ name: Context Information
 on:
   push:
     branches-ignore: main
+    branches: feature/basic-workflow
 jobs:
   show-context:
     name: Show Context
@@ -10,7 +11,7 @@ jobs:
       - name: Dump Event Information
         env:
           CONTEXT_ITEM: ${{ toJson(github) }}
-        run: echo "${CONTEXT_ITEM} 123"
+        run: echo "${CONTEXT_ITEM}"
       - name: Dump Job Information
         env:
           CONTEXT_ITEM: ${{ toJson(job) }}
