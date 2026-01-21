@@ -10,7 +10,7 @@ jobs:
       - name: Dump Event Information
         env:
           CONTEXT_ITEM: ${{ toJson(github) }}
-        run: echo "${CONTEXT_ITEM}"
+        run: echo "${CONTEXT_ITEM} 123"
       - name: Dump Job Information
         env:
           CONTEXT_ITEM: ${{ toJson(job) }}
