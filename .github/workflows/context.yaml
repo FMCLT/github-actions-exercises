@@ -2,7 +2,6 @@ name: Context Information
 on:
   push:
     branches-ignore: main
-    branches: feature/basic-workflow
 jobs:
   show-context:
     name: Show Context
